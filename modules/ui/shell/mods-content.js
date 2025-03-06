@@ -414,7 +414,7 @@ export class ModsContent extends Panel {
 			this.modUrlText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_MOD_URL"));
 			this.modUrlText.setAttribute('data-tooltip-content', Locale.compose("LOC_MOD_TCS_UI_MOD_URL_TOOLTIP"));
 			this.modUrlText.addEventListener('click', () => {
-				UI.setClipboardText(modUrl);
+				UI.setClipboardText(Locale.compose(modUrl));
 				this.modUrlText.removeAttribute('data-tooltip-content');
 				this.modUrlText.setAttribute('data-tooltip-content', Locale.compose("LOC_MOD_TCS_UI_MOD_URL_TOOLTIP_COPIED"));
             });
