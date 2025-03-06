@@ -19,6 +19,11 @@ Mods are enabled by default after installation.
 
 **Note:** Please ensure mods are not nested inside an extra folder after extracting - if they are they will not work!
 
+## Localization
+If you would like to contribute a translation, please do one of the following:
+* open an issue with the **localization** label and upload your files there, OR
+* open a branch from the current version, add your localization to an appropriate folder, and create a Pull Request.
+
 ## Custom Properties
 To support custom Properties simply add them to the Properties tag within your .modinfo file. The following custom Properties are currently supported:
 * SpecialThanks
