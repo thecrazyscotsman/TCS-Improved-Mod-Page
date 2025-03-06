@@ -1,5 +1,5 @@
 # TCS Improved Mod Page
- Various improvements to the Civilization 7 Mod page.
+Official releases hosted on ![Civfanatics](https://forums.civfanatics.com/resources/tcs-improved-mod-page.32024/).
 
 ## Description
 Various improvements to the Mod page. This includes:
