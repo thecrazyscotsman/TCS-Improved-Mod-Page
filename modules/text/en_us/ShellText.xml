@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+	<EnglishText>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_NAME">
+			<Text>TCS Improved Mod Page</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_DESCRIPTION">
+			<Text>Various improvements to the Mod page. This includes:[LIST][LI] • Separating official and fan content into different scrollable lists[LI] • Show hidden and locked content[LI] • Reducing wasted space[LI] • Added support for several custom Properties[LI] • Added iconography to aid in status readability[/LIST][N][icon:TCS_ICON_YES] Enabled[N][icon:TCS_ICON_NO] Disabled[N][icon:TCS_ICON_LOCK] Locked[N][icon:TCS_ICON_CORE] Essential[/LIST][N][B]Modders:[/B]To support custom Properties (currently [B]SpecialThanks[/B], [B]Version[/B], [B]Compatibility[/B], and [B]URL[/B]) simply add them to the Properties tag within your .modinfo file, using mine as an example.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_AUTHORS">
+			<Text>thecrazyscotsman</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_THANKS">
+			<Text>Fathema Khanom and FlatIcon for the UI icons.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_COMPATIBILITY">
+			<Text>This should be compatible with all other mods.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_URL">
+			<Text>https://forums.civfanatics.com/resources/tcs-improved-mod-page.32024</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_OFFICIAL_HEADER">
+			<Text>Firaxis</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_UNOFFICIAL_HEADER">
+			<Text>Mods</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DETAILS_HEADER">
+			<Text>Details</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_DESCRIPTION_HEADER">
+			<Text>Description</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_GATED_HEADER">
+			<Text>Locked Content</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_PROPERTIES_HEADER">
+			<Text>Properties</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_ENABLE_ALL">
+			<Text>Enable All</Text>
+		</Row>	
+		<Row Tag="LOC_MOD_TCS_UI_DISABLE_ALL">
+			<Text>Disable All</Text>
+		</Row>			
+		
+		<Row Tag="LOC_MOD_TCS_UI_AUTHOR">
+			<Text>[icon:TCS_ICON_USER] [B]Author:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_SPECIAL_THANKS">
+			<Text>[icon:TCS_ICON_SMILE] [B]Special Thanks:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_PACKAGE">
+			<Text>This content is either unowned or unreleased, and requires {1_String}.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_ADDITIONAL">
+			<Text>additional DLC</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_DLC_CROSSROADS_CONTENT">
+			<Text>the [B]Crossroads of the World Collection[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_RIGHT_TO_RULE_CONTENT">
+			<Text>the [B]Right to Rule Collection[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_DELUXE_CONTENT">
+			<Text>the [B]Deluxe Content Pack[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_FOUNDERS_CONTENT">
+			<Text>the [B]Founders Content Pack[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_SHAWNEE_CONTENT">
+			<Text>the [B]Tecumseh and Shawnee Pack[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_NAPOLEON_CONTENT">
+			<Text>signing up for a [B]2K Account[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_NAPOLEON_ALT_CONTENT">
+			<Text>signing up for a [B]2K Account[/B] and owning [B]Civilization VI[/B]</Text>
+		</Row>
+		
+		
+		<Row Tag="LOC_MOD_TCS_UI_VERSION">
+			<Text>[icon:TCS_ICON_WRENCH] Version [B]{1_String}[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_OFFICIAL">
+			<Text>[icon:TCS_ICON_STAR] Official content created by [B]Firaxis[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_UNOFFICIAL">
+			<Text>[icon:TCS_ICON_ADD] Unofficial content created by [B]fans[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DATE_CREATED">
+			<Text>[icon:TCS_ICON_QUESTION] Published on [B]{1_String}[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_AFFECTS_SAVE_GAMES">
+			<Text>[icon:TCS_ICON_KEY] This mod [B]Affects Save Games[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_ID">
+			<Text>[icon:TCS_ICON_SETTINGS] [B]Mod Id:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_COMPATIBILITY">
+			<Text>[icon:TCS_ICON_QUESTION] [B]Compatibility Notes:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL">
+			<Text>[icon:TCS_ICON_INTERNET] [STYLE:clickable-link]Mod Homepage[/STYLE]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL_TOOLTIP">
+			<Text>Click to copy to clipboard.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL_TOOLTIP_COPIED">
+			<Text>Copied!</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_ENABLED">
+			<Text>[icon:TCS_ICON_YES]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DISABLED">
+			<Text>[icon:TCS_ICON_NO]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_GATED">
+			<Text>[icon:TCS_ICON_LOCK]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_CORE">
+			<Text>[icon:TCS_ICON_CORE]</Text>
+		</Row>
+		
+	</EnglishText>
+</Database>
