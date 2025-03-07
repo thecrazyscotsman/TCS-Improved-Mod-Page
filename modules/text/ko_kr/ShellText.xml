@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+	<LocalizedText>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_NAME" Language="ko_KR">
+			<Text>TCS의 개선된 모드 화면</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_DESCRIPTION" Language="ko_KR">
+			<Text>다음과 같은 추가 콘텐츠 화면에 대한 다양한 개선사항을 포함합니다.[LIST][LI] • 공식 및 팬 콘텐츠를 다른 스크롤 가능 목록으로 분리[LI] • 숨겨진 콘텐츠 및 잠김 콘텐츠 표시[LI] • 낭비되는 공간 감소[LI] • [B]특별한 감사[/B] 및 [B]버전[/B] 속성에 대한 지원 추가[LI] • 상태 가독성을 위한 아이콘 추가[/LIST][icon:TCS_ICON_YES] 활성화[N][icon:TCS_ICON_NO] 비활성화[N][icon:TCS_ICON_LOCK] 잠김[N][icon:TCS_ICON_CORE] 필수</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_AUTHORS" Language="ko_KR">
+			<Text>thecrazyscotsman</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_THANKS" Language="ko_KR">
+			<Text>UI 아이콘을 담당한 Fathema Khanom 과 FlatIcon.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_COMPATIBILITY" Language="ko_KR">
+			<Text>이 모드는 다른 모든 모드와 호환되어야 합니다.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_URL" Language="ko_KR">
+			<Text>https://forums.civfanatics.com/resources/tcs-improved-mod-page.32024</Text>
+		</Row>
+
+		<Row Tag="LOC_MOD_TCS_UI_OFFICIAL_HEADER" Language="ko_KR">
+			<Text>파이락시스</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_UNOFFICIAL_HEADER" Language="ko_KR">
+			<Text>모드</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DETAILS_HEADER" Language="ko_KR">
+			<Text>세부 사항</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_DESCRIPTION_HEADER" Language="ko_KR">
+			<Text>설명</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_GATED_HEADER" Language="ko_KR">
+			<Text>잠긴 컨텐츠</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_PROPERTIES_HEADER" Language="ko_KR">
+			<Text>속성</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_ENABLE_ALL" Language="ko_KR">
+			<Text>모두 활성화</Text>
+		</Row>	
+		<Row Tag="LOC_MOD_TCS_UI_DISABLE_ALL" Language="ko_KR">
+			<Text>모두 비활성화</Text>
+		</Row>			
+		
+		<Row Tag="LOC_MOD_TCS_UI_AUTHOR" Language="ko_KR">
+			<Text>[icon:TCS_ICON_USER] [B]제작자:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_SPECIAL_THANKS" Language="ko_KR">
+			<Text>[icon:TCS_ICON_SMILE] [B]특별한 감사:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_PACKAGE" Language="ko_KR">
+			<Text>이 콘텐츠는 소유하고 있지 않거나 출시되지 않았으며, 다음이 필요합니다 : {1_String}.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_ADDITIONAL" Language="ko_KR">
+			<Text>추가 DLC</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_DLC_CROSSROADS_CONTENT" Language="ko_KR">
+			<Text>[B]세계의 교차로 컬렉션[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_RIGHT_TO_RULE_CONTENT" Language="ko_KR">
+			<Text>[B]지배할 권리 컬렉션[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_DELUXE_CONTENT" Language="ko_KR">
+			<Text>[B]디럭스 콘텐츠 팩[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_FOUNDERS_CONTENT" Language="ko_KR">
+			<Text>[B]파운더스 콘텐츠 팩[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_SHAWNEE_CONTENT" Language="ko_KR">
+			<Text>[B]테쿰세와 쇼니족 팩[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_NAPOLEON_CONTENT" Language="ko_KR">
+			<Text>[B]2K 계정[/B]에 가입하여 플레이 가능합니다.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_NAPOLEON_ALT_CONTENT" Language="ko_KR">
+			<Text>[B]2K 계정[/B]에 가입하고 [B]문명 VI[/B]를 소유하면 플레이 가능합니다.</Text>
+		</Row>
+		
+		
+		<Row Tag="LOC_MOD_TCS_UI_VERSION" Language="ko_KR">
+			<Text>[icon:TCS_ICON_WRENCH] 버전 [B]{1_String}[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_OFFICIAL" Language="ko_KR">
+			<Text>[icon:TCS_ICON_STAR] [B]파이락시스[/B]가 만든 공식 컨텐츠</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_UNOFFICIAL" Language="ko_KR">
+			<Text>[icon:TCS_ICON_ADD] [B]팬[/B]이 만든 비공식 콘텐츠</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DATE_CREATED" Language="ko_KR">
+			<Text>[icon:TCS_ICON_QUESTION] 게시 일자 [B]{1_String}[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_AFFECTS_SAVE_GAMES" Language="ko_KR">
+			<Text>[icon:TCS_ICON_KEY] 이 모드는 [B]저장 게임에 영향을 미칩니다[/B].</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_ID" Language="ko_KR">
+			<Text>[icon:TCS_ICON_SETTINGS] 모드 Id: [B]{1_String}[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_COMPATIBILITY" Language="ko_KR">
+			<Text>[icon:TCS_ICON_QUESTION] [B]호환성 참고 사항:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL" Language="ko_KR">
+			<Text>[icon:TCS_ICON_INTERNET] [STYLE:clickable-link]모드 홈페이지[/STYLE]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL_TOOLTIP" Language="ko_KR">
+			<Text>클릭하여 클립보드에 복사.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL_TOOLTIP_COPIED" Language="ko_KR">
+			<Text>복사됨!</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_ENABLED" Language="ko_KR">
+			<Text>[icon:TCS_ICON_YES]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DISABLED" Language="ko_KR">
+			<Text>[icon:TCS_ICON_NO]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_GATED" Language="ko_KR">
+			<Text>[icon:TCS_ICON_LOCK]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_CORE" Language="ko_KR">
+			<Text>[icon:TCS_ICON_CORE]</Text>
+		</Row>
+		
+	</LocalizedText>
+</Database>
