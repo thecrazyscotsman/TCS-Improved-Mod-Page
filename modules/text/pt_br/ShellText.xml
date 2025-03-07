@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+	<LocalizedText>		
+		<Row Tag="LOC_MOD_TCS_UI_OFFICIAL_HEADER" Language="pt_BR">
+			<Text>Firaxis</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_UNOFFICIAL_HEADER" Language="pt_BR">
+			<Text>Mods</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DETAILS_HEADER" Language="pt_BR">
+			<Text>Detalhes</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_DESCRIPTION_HEADER" Language="pt_BR">
+			<Text>Descrição</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_GATED_HEADER" Language="pt_BR">
+			<Text>Conteúdo Bloqueado</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_PROPERTIES_HEADER" Language="pt_BR">
+			<Text>Propriedades</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_ENABLE_ALL" Language="pt_BR">
+			<Text>Ativar Todos</Text>
+		</Row>	
+		<Row Tag="LOC_MOD_TCS_UI_DISABLE_ALL" Language="pt_BR">
+			<Text>Desativar Todos</Text>
+		</Row>			
+		
+		<Row Tag="LOC_MOD_TCS_UI_AUTHOR" Language="pt_BR">
+			<Text>[icon:TCS_ICON_USER] [B]Autor:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_SPECIAL_THANKS" Language="pt_BR">
+			<Text>[icon:TCS_ICON_SMILE] [B]Agradecimentos:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_PACKAGE" Language="pt_BR">
+			<Text>Este contéudo não foi lançado ou não foi adquirido e requer {1_String}.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_ADDITIONAL" Language="pt_BR">
+			<Text>Conteúdo adicional</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_DLC_CROSSROADS_CONTENT" Language="pt_BR">
+			<Text>a [B]Coleção Encruzilhadas do Mundo[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_RIGHT_TO_RULE_CONTENT" Language="pt_BR">
+			<Text>a [B]Coleção Direito de Governar[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_DELUXE_CONTENT" Language="pt_BR">
+			<Text>o [B]Pacote de Conteúdo Deluxe[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_FOUNDERS_CONTENT" Language="pt_BR">
+			<Text>a [B]Pacote de Conteúdo Fundadores[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_SHAWNEE_CONTENT" Language="pt_BR">
+			<Text>o [B]Pacote Tecumseh e Shawnee[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_NAPOLEON_CONTENT" Language="pt_BR">
+			<Text>criar uma [B]Conta 2K[/B] gratuita</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_NAPOLEON_ALT_CONTENT" Language="pt_BR">
+			<Text>criar uma [B]2K Account[/B] gratuita e ter adquirido [B]Civilization VI[/B]</Text>
+		</Row>
+		
+		
+		<Row Tag="LOC_MOD_TCS_UI_VERSION" Language="pt_BR">
+			<Text>[icon:TCS_ICON_WRENCH] Versão [B]{1_String}[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_OFFICIAL" Language="pt_BR">
+			<Text>[icon:TCS_ICON_STAR] Conteúdo oficial criado pela [B]Firaxis[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_UNOFFICIAL" Language="pt_BR">
+			<Text>[icon:TCS_ICON_ADD] Conteúdo não-oficial criado pelos [B]fãs[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DATE_CREATED" Language="pt_BR">
+			<Text>[icon:TCS_ICON_QUESTION] Publicado em [B]{1_String}[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_AFFECTS_SAVE_GAMES" Language="pt_BR">
+			<Text>[icon:TCS_ICON_KEY] Este Mod [B]afeta Jogos Salvos[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_ID" Language="pt_BR">
+			<Text>[icon:TCS_ICON_SETTINGS] [B]Id do Mod:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_COMPATIBILITY" Language="pt_BR">
+			<Text>[icon:TCS_ICON_QUESTION] [B]Notas de compatibilidade:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL" Language="pt_BR">
+			<Text>[icon:TCS_ICON_INTERNET] [STYLE:clickable-link]Página do Mod[/STYLE]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL_TOOLTIP" Language="pt_BR">
+			<Text>Clique para copiar para a área de transferência.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL_TOOLTIP_COPIED" Language="pt_BR">
+			<Text>Copiado!</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_ENABLED" Language="pt_BR">
+			<Text>[icon:TCS_ICON_YES]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DISABLED" Language="pt_BR">
+			<Text>[icon:TCS_ICON_NO]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_GATED" Language="pt_BR">
+			<Text>[icon:TCS_ICON_LOCK]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_CORE" Language="pt_BR">
+			<Text>[icon:TCS_ICON_CORE]</Text>
+		</Row>
+		
+	</LocalizedText>
+</Database>
