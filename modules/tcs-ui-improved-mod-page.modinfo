@@ -53,11 +53,13 @@
 				</UpdateIcons>
 				<UpdateText>
 					<Item>text/en_us/ShellText.xml</Item>
+					<Item>text/it_it/ShellText.xml</Item>
 				</UpdateText>
 			</Actions>
 		</ActionGroup>
 	</ActionGroups>
 	<LocalizedText>
 		<File>text/en_us/ShellText.xml</File>
+		<File>text/it_it/ShellText.xml</File>
 	</LocalizedText>
 </Mod>
