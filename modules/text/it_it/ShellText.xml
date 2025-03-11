@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+	<LocalizedText>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_NAME" Language="it_IT">
+			<Text>TCS Pagina Mod Migliorata</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_DESCRIPTION" Language="it_IT">
+			<Text>Varie migliorie alla pagina Mod. Questo include:[LIST][LI] • Separazione dei contenuti ufficiali e dei contenuti creati dai fan in liste a scorrimento separate[LI] • Visualizzazione dei contenuti nascosti e bloccati[LI] • Riduzione dello spazio sprecato[LI] • Aggiunto supporto per diverse Proprietà personalizzate[LI] • Aggiunta di icone per migliorare la leggibilità dello stato[/LIST][N][icon:TCS_ICON_YES] Abilitato[N][icon:TCS_ICON_NO] Disabilitato[N][icon:TCS_ICON_LOCK] Bloccato[N][icon:TCS_ICON_CORE] Essenziale[/LIST][N][B]Modder:[/B] Per supportare le Proprietà personalizzate (attualmente [B]SpecialThanks[/B], [B]Version[/B], [B]Compatibility[/B] e [B]URL[/B]) basta aggiungerle al tag Properties all'interno del tuo file .modinfo, usando il mio come esempio.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_AUTHORS" Language="it_IT">
+			<Text>thecrazyscotsman</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_THANKS" Language="it_IT">
+			<Text>Fathema Khanom e FlatIcon per le icone UI.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_COMPATIBILITY" Language="it_IT">
+			<Text>Dovrebbe essere compatibile con tutte le altre mod.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_URL" Language="it_IT">
+			<Text>https://forums.civfanatics.com/resources/tcs-improved-mod-page.32024</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_OFFICIAL_HEADER" Language="it_IT">
+			<Text>Firaxis</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_UNOFFICIAL_HEADER" Language="it_IT">
+			<Text>Mod</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DETAILS_HEADER" Language="it_IT">
+			<Text>Dettagli</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DESCRIPTION_HEADER" Language="it_IT">
+			<Text>Descrizione</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_GATED_HEADER" Language="it_IT">
+			<Text>Contenuto Bloccato</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_PROPERTIES_HEADER" Language="it_IT">
+			<Text>Proprietà</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_ENABLE_ALL" Language="it_IT">
+			<Text>Abilita Tutto</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DISABLE_ALL" Language="it_IT">
+			<Text>Disabilita Tutto</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_AUTHOR" Language="it_IT">
+			<Text>[icon:TCS_ICON_USER] [B]Autore:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_SPECIAL_THANKS" Language="it_IT">
+			<Text>[icon:TCS_ICON_SMILE] [B]Ringraziamenti speciali:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_PACKAGE" Language="it_IT">
+			<Text>Questo contenuto non è posseduto o non è stato rilasciato e richiede {1_String}.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_ADDITIONAL" Language="it_IT">
+			<Text>DLC aggiuntivo</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_VERSION" Language="it_IT">
+			<Text>[icon:TCS_ICON_WRENCH] Versione [B]{1_String}[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_OFFICIAL" Language="it_IT">
+			<Text>[icon:TCS_ICON_STAR] Contenuto ufficiale creato da [B]Firaxis[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_UNOFFICIAL" Language="it_IT">
+			<Text>[icon:TCS_ICON_ADD] Contenuto non ufficiale creato dai [B]fan[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DATE_CREATED" Language="it_IT">
+			<Text>[icon:TCS_ICON_QUESTION] Pubblicato il [B]{1_String}[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_AFFECTS_SAVE_GAMES" Language="it_IT">
+			<Text>[icon:TCS_ICON_KEY] Questa mod [B]Influisce sui salvataggi[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_ID" Language="it_IT">
+			<Text>[icon:TCS_ICON_SETTINGS] [B]ID Mod:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_COMPATIBILITY" Language="it_IT">
+			<Text>[icon:TCS_ICON_QUESTION] [B]Note sulla compatibilità:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL" Language="it_IT">
+			<Text>[icon:TCS_ICON_INTERNET] [STYLE:clickable-link]Pagina della Mod[/STYLE]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL_TOOLTIP" Language="it_IT">
+			<Text>Clicca per copiare negli appunti.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL_TOOLTIP_COPIED" Language="it_IT">
+			<Text>Copiato!</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_ENABLED" Language="it_IT">
+			<Text>[icon:TCS_ICON_YES]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DISABLED" Language="it_IT">
+			<Text>[icon:TCS_ICON_NO]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_GATED" Language="it_IT">
+			<Text>[icon:TCS_ICON_LOCK]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_CORE" Language="it_IT">
+			<Text>[icon:TCS_ICON_CORE]</Text>
+		</Row>
+	</LocalizedText>
+</Database>
