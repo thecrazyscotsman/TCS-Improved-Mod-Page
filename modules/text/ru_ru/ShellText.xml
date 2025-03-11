@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+	<LocalizedText>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_NAME" Language="ru_RU">
+			<Text>TCS Improved Mod Page</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_DESCRIPTION" Language="ru_RU">
+			<Text>Различные улучшения для раздела дополнительного контента:[LIST][LI] • Разделение официального и стороннего контента на два списка[LI] • Отображение скрытого и заблокированного контента[LI] • Оптимизация пространства[LI] • Поддержка параметров [B]«Особая Благодарность»[/B] и [B]«Версия»[/B][LI] • Добавление иконок:[/LIST][icon:TCS_ICON_YES] Включено[N][icon:TCS_ICON_NO] Выключено[N][icon:TCS_ICON_LOCK] Заблокировано[N][icon:TCS_ICON_CORE] Необходимое</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_AUTHORS" Language="ru_RU">
+			<Text>thecrazyscotsman</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_THANKS" Language="ru_RU">
+			<Text>Fathema Khanom и FlatIcon за иконки.</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_OFFICIAL_HEADER" Language="ru_RU">
+			<Text>Официальные</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_UNOFFICIAL_HEADER" Language="ru_RU">
+			<Text>Сторонние</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DETAILS_HEADER" Language="ru_RU">
+			<Text>Подробности</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_DESCRIPTION_HEADER" Language="ru_RU">
+			<Text>Описание</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_GATED_HEADER" Language="ru_RU">
+			<Text>Заблокированный контент</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_PROPERTIES_HEADER" Language="ru_RU">
+			<Text>Параметры</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_ENABLE_ALL" Language="ru_RU">
+			<Text>Включить все модификации</Text>
+		</Row>	
+		<Row Tag="LOC_MOD_TCS_UI_DISABLE_ALL" Language="ru_RU">
+			<Text>Выключить все модификации</Text>
+		</Row>			
+		
+		<Row Tag="LOC_MOD_TCS_UI_AUTHOR" Language="ru_RU">
+			<Text>[icon:TCS_ICON_USER] [B]Автор:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_SPECIAL_THANKS" Language="ru_RU">
+			<Text>[icon:TCS_ICON_SMILE] [B]Особая Благодарность:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_PACKAGE" Language="ru_RU">
+			<Text>Этот контент еще не приобретен/выпущен и требует {1_String}.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_ADDITIONAL" Language="ru_RU">
+			<Text>Дополнительный DLC</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_DLC_CROSSROADS_CONTENT" Language="ru_RU">
+			<Text>покупки [B]Коллекции «Перепутья мира»[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_RIGHT_TO_RULE_CONTENT" Language="ru_RU">
+			<Text>покупки [B]Коллекции «Право править»[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_DELUXE_CONTENT" Language="ru_RU">
+			<Text>[B]обновления издания до Deluxe[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_FOUNDERS_CONTENT" Language="ru_RU">
+			<Text>[B]обновления издания до Founders[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_SHAWNEE_CONTENT" Language="ru_RU">
+			<Text>покупки [B]Набора «Текумсе и Шони»[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_NAPOLEON_CONTENT" Language="ru_RU">
+			<Text>входа в [B]учетную запись 2K[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_NAPOLEON_ALT_CONTENT" Language="ru_RU">
+			<Text>входа в [B]учетную запись 2K[/B] и приобретения [B]Civilization VI[/B]</Text>
+		</Row>
+		
+		
+		<Row Tag="LOC_MOD_TCS_UI_VERSION" Language="ru_RU">
+			<Text>[icon:TCS_ICON_WRENCH] Версия: [B]{1_String}[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_OFFICIAL" Language="ru_RU">
+			<Text>[icon:TCS_ICON_STAR] Официальный контент от [B]Firaxis[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_UNOFFICIAL" Language="ru_RU">
+			<Text>[icon:TCS_ICON_ADD] Сторонний контент от [B]фанатов[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DATE_CREATED" Language="ru_RU">
+			<Text>[icon:TCS_ICON_QUESTION] Выпущено: [B]{1_String}[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_AFFECTS_SAVE_GAMES" Language="ru_RU">
+			<Text>[icon:TCS_ICON_KEY] Эта модификация [B]влияет на сохраненные игры[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_ID" Language="ru_RU">
+			<Text>[icon:TCS_ICON_SETTINGS] Mod Id: [B]{1_String}[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_COMPATIBILITY" Language="ru_RU">
+			<Text>[icon:TCS_ICON_QUESTION] [B]Совместимость:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL" Language="ru_RU">
+			<Text>[icon:TCS_ICON_INTERNET] [STYLE:clickable-link]Сайт[/STYLE]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL_TOOLTIP" Language="ru_RU">
+			<Text>Нажмите, чтобы скопировать.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL_TOOLTIP_COPIED" Language="ru_RU">
+			<Text>Скопировано!</Text>
+		</Row>		
+		<Row Tag="LOC_MOD_TCS_UI_ENABLED" Language="ru_RU">
+			<Text>[icon:TCS_ICON_YES]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DISABLED" Language="ru_RU">
+			<Text>[icon:TCS_ICON_NO]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_GATED" Language="ru_RU">
+			<Text>[icon:TCS_ICON_LOCK]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_CORE" Language="ru_RU">
+			<Text>[icon:TCS_ICON_CORE]</Text>
+		</Row>
+		
+	</LocalizedText>
+</Database>
