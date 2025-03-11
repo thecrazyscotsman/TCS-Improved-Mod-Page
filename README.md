@@ -8,6 +8,9 @@ Various improvements to the Mod page. This includes:
 * Reducing wasted space
 * Added support for several custom Properties
 * Added iconography to aid in status readability
+* Added buttons to Enable/Disable All for each category.
+
+**Note:** These buttons will not toggle locked content or the TCS Improved Mod Page mod.
 
 ## Installation
 Extract to your Mods folder.
@@ -48,6 +51,6 @@ Here is an example:
 ```
 ## Screenshots
 ### With Mod
-![image](https://github.com/user-attachments/assets/a66f6794-9393-4ae6-9702-1c167ee6c393)
+![image](https://github.com/user-attachments/assets/4ba1a421-fc3a-4972-b55b-5f14698e75a1)
 ### Without Mod 
 ![1741207088663](https://github.com/user-attachments/assets/969955f5-f36b-4402-bbcb-e78d0eaba26d)
