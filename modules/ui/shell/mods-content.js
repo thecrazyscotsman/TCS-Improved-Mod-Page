@@ -9,6 +9,11 @@ import Panel from '/core/ui/panel-support.js';
 import { MustGetElement } from '/core/ui/utilities/utilities-dom.js';
 import ActionHandler from '/core/ui/input/action-handler.js';
 import { Audio } from '/core/ui/audio-base/audio-support.js';
+
+console.warn("----------------------------------");
+console.warn("TCS IMPROVED MOD PAGE (TCS-IMP) - LOADED");
+console.warn("----------------------------------");
+
 export class ModsContent extends Panel {
     constructor(root) {
         super(root);
@@ -30,12 +35,14 @@ export class ModsContent extends Panel {
 		this.officialMods.sort((a, b) => Locale.compare(a.name, b.name));
 		this.unofficialMods.sort((a, b) => Locale.compare(a.name, b.name));
 		this.installedMods = this.officialMods.concat(this.unofficialMods);
+        this.officialModPairs = [];
+        this.unofficialModPairs = [];
 		
 		// Get default mod for when the page is opened
-		const defaultMod = this.unofficialMods.find(m => m.id == "tcs-ui-improved-mod-page")
+		this.defaultMod = this.unofficialMods.find(m => m.id == "tcs-ui-improved-mod-page")
 		this.selectedModIndex = -1; //set to -1 to start to keep the toggle button hidden
-		this.selectedMod = defaultMod;
-        this.selectedModHandle = defaultMod.handle;
+		this.selectedMod = this.defaultMod;
+        this.selectedModHandle = this.defaultMod.handle;
 		
 		// Listeners
 		this.onModActivateListener = this.onModActivate.bind(this);
@@ -43,6 +50,10 @@ export class ModsContent extends Panel {
         this.focusListener = this.onFocus.bind(this);
         this.modToggledActivateListener = this.onModToggled.bind(this);
         this.engineInputListener = this.onEngineInput.bind(this);
+        this.officialModsEnabledActivateListener = this.onEnableAllOfficialToggled.bind(this);
+        this.officialModsDisabledActivateListener = this.onDisableAllOfficialToggled.bind(this);
+        this.unofficialModsEnabledActivateListener = this.onEnableAllUnofficialToggled.bind(this);
+        this.unofficialModsDisabledActivateListener = this.onDisableAllUnofficialToggled.bind(this);
 		
     }
     ;
@@ -74,18 +85,35 @@ export class ModsContent extends Panel {
 			<fxs-slot id="mods" class="additional-content-mods flex-auto relative flex flex-col items-stretch">
 				<div class="no-mods-available w-full flex justify-center items-center flex-auto text-lg hidden" data-l10n-id="LOC_UI_MOD_NONE_AVAILABLE"></div>
 				<fxs-hslot class="mods-available w-full justify-start items-stretch flex-auto">
-					<fxs-scrollable class="mod-list-scrollable flex-auto w-1\\/4" handle-gamepad-pan="true">
-						<fxs-header filigree-style="none" 
-									class="mod-list-official-header relative flex justify-center font-title text-2xl uppercase text-secondary mb-3"
-									title="LOC_MOD_TCS_UI_OFFICIAL_HEADER"></fxs-header>
-						<fxs-vslot class="mod-list-official flex mb-8 m-6"></fxs-vslot>
-					</fxs-scrollable>
-					<fxs-scrollable class="mod-list-scrollable flex-auto w-1\\/4" handle-gamepad-pan="true">
-						<fxs-header filigree-style="none" 
-									class="mod-list-unofficial-header relative flex justify-center font-title text-2xl uppercase text-secondary mb-3"
-									title="LOC_MOD_TCS_UI_UNOFFICIAL_HEADER"></fxs-header>
-						<fxs-vslot class="mod-list-unofficial flex mb-8 m-6"></fxs-vslot>
-					</fxs-scrollable>
+                    <fxs-vslot class="w-1\\/4">
+                        <fxs-header filigree-style="none" 
+                                        class="mod-list-official-header relative flex justify-center font-title text-2xl uppercase text-secondary mb-3"
+                                        title="LOC_MOD_TCS_UI_OFFICIAL_HEADER"></fxs-header>
+                        <fxs-scrollable class="mod-list-scrollable flex-auto" handle-gamepad-pan="true">    
+                            <fxs-vslot class="mod-list-official flex mb-8 m-6"></fxs-vslot>
+                        </fxs-scrollable>
+                        <fxs-hslot class="justify-around pt-2" data-bind-class-toggle="hidden:{{g_NavTray.isTrayRequired}}">
+                            <fxs-button class="enable-all-official min-w-px" caption="LOC_MOD_TCS_UI_ENABLE_ALL"
+                                                tabindex="-1"></fxs-button>
+                            <fxs-button class="disable-all-official min-w-px" caption="LOC_MOD_TCS_UI_DISABLE_ALL"
+                                                tabindex="-1"></fxs-button>
+                        </fxs-hslot>
+                    </fxs-vslot>
+                    <fxs-vslot class="w-1\\/4">
+                        <fxs-header filigree-style="none" 
+                                        class="mod-list-unofficial-header relative flex justify-center font-title text-2xl uppercase text-secondary mb-3"
+                                        title="LOC_MOD_TCS_UI_UNOFFICIAL_HEADER">
+                        </fxs-header>
+                        <fxs-scrollable class="mod-list-scrollable flex-auto" handle-gamepad-pan="true">
+                            <fxs-vslot class="mod-list-unofficial flex mb-8 m-6"></fxs-vslot>
+                        </fxs-scrollable>
+                        <fxs-hslot class="justify-around pt-2" data-bind-class-toggle="hidden:{{g_NavTray.isTrayRequired}}">
+                            <fxs-button class="enable-all-unofficial min-w-px" caption="LOC_MOD_TCS_UI_ENABLE_ALL"
+                                        tabindex="-1"></fxs-button>
+                            <fxs-button class="disable-all-unofficial min-w-px" caption="LOC_MOD_TCS_UI_DISABLE_ALL"
+                                        tabindex="-1"></fxs-button>
+                        </fxs-hslot>
+                    </fxs-vslot>
 					<fxs-vslot class="w-1\\/2">
 						<fxs-header filigree-style="none"
 										class="mod-details-header relative flex justify-center font-title text-2xl uppercase text-secondary mb-3"
@@ -151,10 +179,16 @@ export class ModsContent extends Panel {
 				modList.lastChild.removeEventListener('action-activate', this.onModActivateListener);
 				modList.lastChild.removeEventListener('focus', this.onModFocusListener);
 				modList.removeChild(modList.lastChild);
-			}		
+			}	
 			
 			const toggleEnableButton = MustGetElement('.toggle-enable');
 			toggleEnableButton.addEventListener("action-activate", this.modToggledActivateListener);
+
+            const toggleEnableAllButton = MustGetElement('.enable-all-official');
+			toggleEnableAllButton.addEventListener("action-activate", this.officialModsEnabledActivateListener);
+
+            const toggleDisableAllButton = MustGetElement('.disable-all-official');
+			toggleDisableAllButton.addEventListener("action-activate", this.officialModsDisabledActivateListener);
 			
 			// Update Selected Mods handle.
 			if (this.selectedModHandle != null) {
@@ -164,10 +198,11 @@ export class ModsContent extends Panel {
 			
 			// List the Mods        
             if (this.selectedModHandle == null) {
-                this.selectedModHandle = this.officialMods[0].handle;
+                this.selectedModHandle = this.defaultMod.handle;
             }
 			
-            this.officialMods.forEach((mod, index) => {
+            for (const mod of this.officialMods) {
+                if (Modding.getModProperty(mod.handle, "ShowInBrowser") == 0) { continue; }
                 const modActivatable = document.createElement('fxs-activatable');
                 modActivatable.classList.add('mod-entry', 'group', 'relative', 'flex', 'w-full', 'grow', 'm-1');
                 modActivatable.classList.add(modIndex % 2 === 0 ? '' : 'bg-primary-5');
@@ -208,8 +243,9 @@ export class ModsContent extends Panel {
 				}
                 modTextContainer.appendChild(modEnabled);
 				
+                this.officialModPairs.push([mod.handle, modIndex]);
 				modIndex += 1;
-            });
+            }
         }
 		
 		if (this.unofficialMods.length > 0) {
@@ -224,6 +260,12 @@ export class ModsContent extends Panel {
 			
 			const toggleEnableButton = MustGetElement('.toggle-enable');
 			toggleEnableButton.addEventListener("action-activate", this.modToggledActivateListener);
+
+            const toggleEnableAllButton = MustGetElement('.enable-all-unofficial');
+			toggleEnableAllButton.addEventListener("action-activate", this.unofficialModsEnabledActivateListener);
+
+            const toggleDisableAllButton = MustGetElement('.disable-all-unofficial');
+			toggleDisableAllButton.addEventListener("action-activate", this.unofficialModsDisabledActivateListener);
 			
 			// Update Selected Mods handle.
 			if (this.selectedModHandle != null) {
@@ -232,10 +274,10 @@ export class ModsContent extends Panel {
 			
 			// List the Mods        
             if (this.selectedModHandle == null) {
-                this.selectedModHandle = this.unofficialMods[0].handle;
+                this.selectedModHandle = this.defaultMod.handle;
             }
 			
-            this.unofficialMods.forEach((mod, index) => {
+            for (const mod of this.unofficialMods) {
                 const modActivatable = document.createElement('fxs-activatable');
                 modActivatable.classList.add('mod-entry', 'group', 'relative', 'flex', 'w-full', 'grow', 'm-1');
                 modActivatable.classList.add(modIndex % 2 === 0 ? '' : 'bg-primary-5');
@@ -266,15 +308,16 @@ export class ModsContent extends Panel {
                 modEnabled.setAttribute('data-l10n-id', mod.enabled ? "LOC_MOD_TCS_UI_ENABLED" : "LOC_MOD_TCS_UI_DISABLED");
                 modTextContainer.appendChild(modEnabled);
 				
+                this.unofficialModPairs.push([mod.handle, modIndex]);
 				modIndex += 1;
-            });
+            }
         }
     }
     onAttach() {
         super.onAttach();
         this.Root.addEventListener("focus", this.focusListener);
         this.Root.addEventListener("engine-input", this.engineInputListener);
-        this.updateDetails();
+        this.updateDetails(this.selectedModHandle);
     }
     onDetach() {
         super.onDetach();
@@ -296,11 +339,11 @@ export class ModsContent extends Panel {
         this.renderModListContent();
         this.modEntries = this.Root.querySelectorAll(".mod-entry");
     }
-    updateDetails() {
-        if (!this.selectedModHandle) {
+    updateDetails(handle) {
+        if (!handle) {
             console.error("screen-extras: showModDetails: Invalid selected mod handle!");
         }
-		const modInfo = Modding.getModInfo(this.selectedModHandle);
+		const modInfo = Modding.getModInfo(handle);
 		/* Returns the following:
 			modInfo.handle 
 			modInfo.id 
@@ -324,11 +367,11 @@ export class ModsContent extends Panel {
 		}
 		
 		// Mod name
-		this.modNameHeader.setAttribute('title', this.selectedMod.name);
+		this.modNameHeader.setAttribute('title', modInfo.name);
 		
 		// Version (hidden if not present)
 		// Currently only supports a custom Version property
-		const version = Modding.getModProperty(this.selectedMod.handle, 'Version');
+		const version = Modding.getModProperty(modInfo.handle, 'Version');
         if (version) {
 			this.modVersionText.classList.remove('hidden');
 			this.modVersionText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_VERSION", version));
@@ -338,13 +381,13 @@ export class ModsContent extends Panel {
 		}
         
 		// Author
-        const author = Modding.getModProperty(this.selectedMod.handle, 'Authors');
+        const author = Modding.getModProperty(modInfo.handle, 'Authors');
         if (author) {
 			this.modAuthorText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_AUTHOR", Locale.compose(author)));
         }
 		
 		// Special Thanks (hidden if not present)
-        const thanks = Modding.getModProperty(this.selectedMod.handle, 'SpecialThanks');
+        const thanks = Modding.getModProperty(modInfo.handle, 'SpecialThanks');
         if (thanks) {
 			this.modThanksText.classList.remove('hidden');
 			this.modThanksText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_SPECIAL_THANKS", thanks));
@@ -354,7 +397,7 @@ export class ModsContent extends Panel {
 		}
 		
 		// Description
-        this.modDescriptionText.setAttribute('data-l10n-id', this.selectedMod.description);
+        this.modDescriptionText.setAttribute('data-l10n-id', modInfo.description);
 		
 		// Gated
 		if (modInfo.allowance != ModAllowance.Full) {
@@ -366,12 +409,12 @@ export class ModsContent extends Panel {
 		}
 		
 		// Created date
-        if (this.selectedMod.created) {
-			this.modDateText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_DATE_CREATED", this.selectedMod.created));
+        if (modInfo.created) {
+			this.modDateText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_DATE_CREATED", modInfo.created));
         }
 		
 		// Affects Save Games
-		const affectsSaveGames = Modding.getModProperty(this.selectedMod.handle, 'AffectsSavedGames');
+		const affectsSaveGames = Modding.getModProperty(modInfo.handle, 'AffectsSavedGames');
 		if (affectsSaveGames == 1) {
 			this.modAffectsSaveGamesText.classList.remove('hidden');
 			this.modAffectsSaveGamesText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_AFFECTS_SAVE_GAMES"));
@@ -398,7 +441,7 @@ export class ModsContent extends Panel {
 		}
 		
 		// Compatibility
-		const compatibility = Modding.getModProperty(this.selectedMod.handle, 'Compatibility');
+		const compatibility = Modding.getModProperty(modInfo.handle, 'Compatibility');
         if (compatibility) {
 			this.modCompatibilityText.classList.remove('hidden');
 			this.modCompatibilityText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_COMPATIBILITY", compatibility));
@@ -408,7 +451,7 @@ export class ModsContent extends Panel {
 		}
 		
 		// URL
-		const modUrl = Modding.getModProperty(this.selectedMod.handle, 'URL');
+		const modUrl = Modding.getModProperty(modInfo.handle, 'URL');
         if (modUrl) {
 			this.modUrlText.classList.remove('hidden');
 			this.modUrlText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_MOD_URL"));
@@ -417,6 +460,12 @@ export class ModsContent extends Panel {
 				UI.setClipboardText(Locale.compose(modUrl));
 				this.modUrlText.removeAttribute('data-tooltip-content');
 				this.modUrlText.setAttribute('data-tooltip-content', Locale.compose("LOC_MOD_TCS_UI_MOD_URL_TOOLTIP_COPIED"));
+            });
+            this.modUrlText.addEventListener('click', (e) => {
+                if (e.type == 'contextmenu') {
+                    this.modUrlText.removeAttribute('data-tooltip-content');
+                    this.modUrlText.setAttribute('data-tooltip-content', Locale.compose("You right-clicked! Go you!"));
+                }
             });
         }
 		else {
@@ -486,6 +535,69 @@ export class ModsContent extends Panel {
 		this.determineEnableButtonState();
 		this.updateNavTray();
     }
+    onEnableAllOfficialToggled(event) {
+        if (!(event.target instanceof HTMLElement)) {
+            return;
+        }
+        this.handleAllModToggle(true, true);
+    }
+    onDisableAllOfficialToggled(event) {
+        if (!(event.target instanceof HTMLElement)) {
+            return;
+        }
+        this.handleAllModToggle(true, false);
+    }
+    onEnableAllUnofficialToggled(event) {
+        if (!(event.target instanceof HTMLElement)) {
+            return;
+        }
+        this.handleAllModToggle(false, true);
+    }
+    onDisableAllUnofficialToggled(event) {
+        if (!(event.target instanceof HTMLElement)) {
+            return;
+        }
+        this.handleAllModToggle(false, false);
+    }
+    handleAllModToggle(official, enable) {
+        const currentModIndex = this.selectedModIndex;
+        const currentModHandle = this.selectedModHandle;
+        const currentMod = Modding.getModInfo(currentModHandle);
+        const modPairs = (official == true) ? this.officialModPairs : this.unofficialModPairs;
+        if (modPairs.length == 0) {
+            return;
+        } 
+
+        modPairs.forEach(p => {
+            const modHandle = p[0];
+            const modIndex = p[1];
+            const modInfo = Modding.getModInfo(modHandle);
+            const enabled = modInfo.enabled;
+            const modId = modInfo.id;
+            let updated = false;
+            if (!modInfo.official || (modInfo.official && modInfo.allowance == ModAllowance.Full)) {
+                if (enable == false && modId != 'tcs-ui-improved-mod-page') {
+                    if (enabled && Modding.canDisableMods([modHandle]).status == 0) {
+                        Modding.disableMods([modHandle]);
+                        updated = true;
+                    }
+                }
+                else {
+                    if (!enabled && Modding.canEnableMods([modHandle], true).status == 0) {
+                        Modding.enableMods([modHandle], true);
+                        updated = true;
+                    }
+                }
+            }
+            if (updated == true) {
+                this.updateModEntry(modIndex);
+                this.handleSelection(modHandle, modIndex);
+                this.updateNavTray();
+                
+            }
+        });	
+        this.handleSelection(currentModHandle, currentModIndex);
+    }
     updateNavTray() {
         NavTray.clear();
         NavTray.addOrUpdateGenericBack();
@@ -543,20 +655,28 @@ export class ModsContent extends Panel {
         this.selectedModIndex = index;
         this.selectedMod = Modding.getModInfo(modHandle);
         this.selectedModHandle = modHandle;
-        this.updateDetails();
+        this.updateDetails(this.selectedModHandle);
     }
     updateModEntry(index) {
-        const modEnrty = this.modEntries.item(index);
-        const modHandleString = modEnrty.getAttribute('mod-handle');
+        const modEntries = this.modEntries;
+        if (!modEntries || modEntries.length == 0) { return; }
+        let modEntry;
+        modEntries.forEach(m => {
+            if (m.getAttribute('index') == index.toString()) {
+                modEntry = m; 
+            }
+        });
+
+        const modHandleString = modEntry.getAttribute('mod-handle');
         if (!modHandleString) {
             return;
         }
-        if (this.selectedModHandle == null) {
+        /*if (this.selectedModHandle == null) {
             return;
-        }
-        const modInfo = Modding.getModInfo(this.selectedModHandle);
-        const nameText = modEnrty.querySelector(".mod-text-name");
-        const enabledText = modEnrty.querySelector(".mod-text-enabled");
+        }*/
+        const modInfo = Modding.getModInfo(parseInt(modHandleString));
+        const nameText = modEntry.querySelector(".mod-text-name");
+        const enabledText = modEntry.querySelector(".mod-text-enabled");
         if (nameText) {
             nameText.textContent = modInfo.name;
         }

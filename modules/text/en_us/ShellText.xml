@@ -41,10 +41,10 @@
 		</Row>
 		
 		<Row Tag="LOC_MOD_TCS_UI_ENABLE_ALL">
-			<Text>Enable All</Text>
+			<Text>[icon:TCS_ICON_YES] All</Text>
 		</Row>	
 		<Row Tag="LOC_MOD_TCS_UI_DISABLE_ALL">
-			<Text>Disable All</Text>
+			<Text>[icon:TCS_ICON_NO] All</Text>
 		</Row>			
 		
 		<Row Tag="LOC_MOD_TCS_UI_AUTHOR">
