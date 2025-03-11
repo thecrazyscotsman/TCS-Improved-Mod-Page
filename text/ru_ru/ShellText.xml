@@ -35,10 +35,10 @@
 		</Row>
 		
 		<Row Tag="LOC_MOD_TCS_UI_ENABLE_ALL" Language="ru_RU">
-			<Text>Включить все модификации</Text>
+			<Text>Вкл. все</Text>
 		</Row>	
 		<Row Tag="LOC_MOD_TCS_UI_DISABLE_ALL" Language="ru_RU">
-			<Text>Выключить все модификации</Text>
+			<Text>Выкл. все</Text>
 		</Row>			
 		
 		<Row Tag="LOC_MOD_TCS_UI_AUTHOR" Language="ru_RU">
