@@ -13,7 +13,12 @@
 		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_THANKS" Language="ru_RU">
 			<Text>Fathema Khanom и FlatIcon за иконки.</Text>
 		</Row>
-		
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_COMPATIBILITY" Language="ru_RU">
+			<Text>Совместим с другими модами.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_URL" Language="ru_RU">
+			<Text>https://forums.civfanatics.com/resources/tcs-improved-mod-page.32024</Text>
+		</Row>		
 		<Row Tag="LOC_MOD_TCS_UI_OFFICIAL_HEADER" Language="ru_RU">
 			<Text>Официальные</Text>
 		</Row>
@@ -35,10 +40,10 @@
 		</Row>
 		
 		<Row Tag="LOC_MOD_TCS_UI_ENABLE_ALL" Language="ru_RU">
-			<Text>Включить все модификации</Text>
+			<Text>[icon:TCS_ICON_YES] все</Text>
 		</Row>	
 		<Row Tag="LOC_MOD_TCS_UI_DISABLE_ALL" Language="ru_RU">
-			<Text>Выключить все модификации</Text>
+			<Text>[icon:TCS_ICON_NO] все</Text>
 		</Row>			
 		
 		<Row Tag="LOC_MOD_TCS_UI_AUTHOR" Language="ru_RU">
