@@ -38,10 +38,10 @@
 			<Text>Proprietà</Text>
 		</Row>
 		<Row Tag="LOC_MOD_TCS_UI_ENABLE_ALL" Language="it_IT">
-			<Text>Abilita Tutto</Text>
+			<Text>[icon:TCS_ICON_YES] Tutto</Text>
 		</Row>
 		<Row Tag="LOC_MOD_TCS_UI_DISABLE_ALL" Language="it_IT">
-			<Text>Disabilita Tutto</Text>
+			<Text>[icon:TCS_ICON_NO] Tutto</Text>
 		</Row>
 		<Row Tag="LOC_MOD_TCS_UI_AUTHOR" Language="it_IT">
 			<Text>[icon:TCS_ICON_USER] [B]Autore:[/B] {1_String}</Text>
