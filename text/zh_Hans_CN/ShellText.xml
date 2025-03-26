@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+    <LocalizedText>
+        <!-- 核心元数据 -->
+        <Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_NAME" Language="zh_Hans_CN">
+            <Text>TCS改进模组界面</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_DESCRIPTION" Language="zh_Hans_CN">
+            <Text>模组界面优化改进，包含以下功能：[LIST][LI] • 官方内容与玩家模组分开展示[LI] • 显示隐藏/锁定内容[LI] • 优化空间利用率[LI] • 支持[B]特别鸣谢[/B]、[B]版本号[/B]等自定义属性[LI] • 新增状态可视化图标[/LIST][N][icon:TCS_ICON_YES] 已启用[N][icon:TCS_ICON_NO] 已禁用[N][icon:TCS_ICON_LOCK] 已锁定[N][icon:TCS_ICON_CORE] 核心[/LIST][N][B]模组开发者注意：[/B]如需支持自定义属性（当前支持[B]SpecialThanks[/B]、[B]Version[/B]、[B]Compatibility[/B]和[B]URL[/B]），请参考本模组的.modinfo文件格式添加至Properties标签。</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_AUTHORS" Language="zh_Hans_CN">
+            <Text>thecrazyscotsman</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_THANKS" Language="zh_Hans_CN">
+            <Text>界面图标设计：Fathema Khanom，资源来源：FlatIcon</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_COMPATIBILITY" Language="zh_Hans_CN">
+            <Text>本模组应与所有其他模组兼容</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_URL" Language="zh_Hans_CN">
+            <Text>https://forums.civfanatics.com/resources/tcs-improved-mod-page.32024</Text>
+        </Row>
+
+        <!-- 界面元素 -->
+        <Row Tag="LOC_MOD_TCS_UI_OFFICIAL_HEADER" Language="zh_Hans_CN">
+            <Text>官方内容</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_UNOFFICIAL_HEADER" Language="zh_Hans_CN">
+            <Text>玩家模组</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_DETAILS_HEADER" Language="zh_Hans_CN">
+            <Text>详细信息</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_DESCRIPTION_HEADER" Language="zh_Hans_CN">
+            <Text>描述</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_GATED_HEADER" Language="zh_Hans_CN">
+            <Text>锁定内容</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_PROPERTIES_HEADER" Language="zh_Hans_CN">
+            <Text>属性</Text>
+        </Row>
+
+        <!-- 操作按钮 -->
+        <Row Tag="LOC_MOD_TCS_UI_ENABLE_ALL" Language="zh_Hans_CN">
+            <Text>[icon:TCS_ICON_YES] 全部启用</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_DISABLE_ALL" Language="zh_Hans_CN">
+            <Text>[icon:TCS_ICON_NO] 全部禁用</Text>
+        </Row>
+
+        <!-- 动态文本 -->
+        <Row Tag="LOC_MOD_TCS_UI_AUTHOR" Language="zh_Hans_CN">
+            <Text>[icon:TCS_ICON_USER] [B]作者：[/B]{1_String}</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_SPECIAL_THANKS" Language="zh_Hans_CN">
+            <Text>[icon:TCS_ICON_SMILE] [B]特别鸣谢：[/B]{1_String}</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_DLC_PACKAGE" Language="zh_Hans_CN">
+            <Text>此内容尚未拥有或发布，需要{1_String}</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_DLC_ADDITIONAL" Language="zh_Hans_CN">
+            <Text>附加DLC</Text>
+        </Row>
+
+        <!-- DLC名称 -->
+        <Row Tag="LOC_MOD_TCS_UI_DLC_CROSSROADS_CONTENT" Language="zh_Hans_CN">
+            <Text>[B]世界的十字路口合集[/B]</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_DLC_RIGHT_TO_RULE_CONTENT" Language="zh_Hans_CN">
+            <Text>[B]统治之权合集[/B]</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_DLC_DELUXE_CONTENT" Language="zh_Hans_CN">
+            <Text>[B]豪华内容包[/B]</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_DLC_FOUNDERS_CONTENT" Language="zh_Hans_CN">
+            <Text>[B]创始人内容包[/B]</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_DLC_SHAWNEE_CONTENT" Language="zh_Hans_CN">
+            <Text>[B]特库姆塞与肖尼族包[/B]</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_DLC_NAPOLEON_CONTENT" Language="zh_Hans_CN">
+            <Text>注册[B]2K账户[/B]</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_DLC_NAPOLEON_ALT_CONTENT" Language="zh_Hans_CN">
+            <Text>注册[B]2K账户[/B]并拥有[B]文明VI[/B]</Text>
+        </Row>
+
+        <!-- 状态信息 -->
+        <Row Tag="LOC_MOD_TCS_UI_VERSION" Language="zh_Hans_CN">
+            <Text>[icon:TCS_ICON_WRENCH] 版本 [B]{1_String}[/B]</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_OFFICIAL" Language="zh_Hans_CN">
+            <Text>[icon:TCS_ICON_STAR] [B]Firaxis[/B]官方内容</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_UNOFFICIAL" Language="zh_Hans_CN">
+            <Text>[icon:TCS_ICON_ADD] [B]玩家[/B]制作内容</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_DATE_CREATED" Language="zh_Hans_CN">
+            <Text>[icon:TCS_ICON_QUESTION] 发布于 [B]{1_String}[/B]</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_AFFECTS_SAVE_GAMES" Language="zh_Hans_CN">
+            <Text>[icon:TCS_ICON_KEY] 此模组[B]影响存档兼容性[/B]</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_MOD_ID" Language="zh_Hans_CN">
+            <Text>[icon:TCS_ICON_SETTINGS] [B]模组ID：[/B]{1_String}</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_COMPATIBILITY" Language="zh_Hans_CN">
+            <Text>[icon:TCS_ICON_QUESTION] [B]兼容性说明：[/B]{1_String}</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_MOD_URL" Language="zh_Hans_CN">
+            <Text>[icon:TCS_ICON_INTERNET] [STYLE:clickable-link]模组主页[/STYLE]</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_MOD_URL_TOOLTIP" Language="zh_Hans_CN">
+            <Text>点击复制到剪贴板</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_MOD_URL_TOOLTIP_COPIED" Language="zh_Hans_CN">
+            <Text>已复制！</Text>
+        </Row>
+
+        <!-- 图标状态 -->
+        <Row Tag="LOC_MOD_TCS_UI_ENABLED" Language="zh_Hans_CN">
+            <Text>[icon:TCS_ICON_YES]</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_DISABLED" Language="zh_Hans_CN">
+            <Text>[icon:TCS_ICON_NO]</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_GATED" Language="zh_Hans_CN">
+            <Text>[icon:TCS_ICON_LOCK]</Text>
+        </Row>
+        <Row Tag="LOC_MOD_TCS_UI_CORE" Language="zh_Hans_CN">
+            <Text>[icon:TCS_ICON_CORE]</Text>
+        </Row>
+    </LocalizedText>
+</Database>
