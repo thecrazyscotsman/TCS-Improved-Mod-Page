@@ -113,6 +113,9 @@
 		<Row Tag="LOC_MOD_TCS_UI_MOD_URL_TOOLTIP_COPIED">
 			<Text>Copied!</Text>
 		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_CIVMODS_MANAGED">
+			<Text>[icon:TCS_ICON_WRENCH] Managed by [B]CivMods[/B]!</Text>
+		</Row>
 		
 		<Row Tag="LOC_MOD_TCS_UI_ENABLED">
 			<Text>[icon:TCS_ICON_YES]</Text>

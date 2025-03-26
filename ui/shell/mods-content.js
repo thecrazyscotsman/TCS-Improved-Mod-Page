@@ -75,6 +75,7 @@ export class ModsContent extends Panel {
 		this.modId = MustGetElement('.mod-id', this.Root);
 		this.modCompatibilityText = MustGetElement('.mod-compatibility', this.Root);
 		this.modUrlText = MustGetElement('.mod-url', this.Root);
+        this.modCivModsText = MustGetElement('.mod-civmods', this.Root);
 		this.modToggle = MustGetElement('.toggle-enable', this.Root);
         //this.modDependenciesContent = MustGetElement('.mod-dependencies', this.Root);
         this.renderModListContent();
@@ -147,6 +148,7 @@ export class ModsContent extends Panel {
 									<p class="mod-official hidden"></p>
 									<p class="mod-unofficial hidden"></p>
 									<p class="mod-compatibility hidden"></p>
+                                    <p class="mod-civmods hidden"></p>
 								</div>
 							</fxs-hslot>
 							
@@ -371,7 +373,7 @@ export class ModsContent extends Panel {
 		
 		// Version (hidden if not present)
 		// Currently only supports a custom Version property
-		const version = Modding.getModProperty(modInfo.handle, 'Version');
+		const version = (Modding.getModProperty(modInfo.handle, 'CivModsVersion')) ? Modding.getModProperty(modInfo.handle, 'CivModsVersion') : Modding.getModProperty(modInfo.handle, 'Version');
         if (version) {
 			this.modVersionText.classList.remove('hidden');
 			this.modVersionText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_VERSION", version));
@@ -449,9 +451,18 @@ export class ModsContent extends Panel {
 		else {
 			this.modCompatibilityText.classList.add('hidden');
 		}
+
+        // CivMods
+        if (Modding.getModProperty(modInfo.handle, 'CivModsVersion') || Modding.getModProperty(modInfo.handle, 'CivModsURL')) {
+			this.modCivModsText.classList.remove('hidden');
+			this.modCivModsText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_CIVMODS_MANAGED"));
+        }
+		else {
+			this.modCivModsText.classList.add('hidden');
+		}
 		
 		// URL
-		const modUrl = Modding.getModProperty(modInfo.handle, 'URL');
+		const modUrl = (Modding.getModProperty(modInfo.handle, 'URL')) ? Modding.getModProperty(modInfo.handle, 'URL') : Modding.getModProperty(modInfo.handle, 'CivModsURL');
         if (modUrl) {
 			this.modUrlText.classList.remove('hidden');
 			this.modUrlText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_MOD_URL"));
