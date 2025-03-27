@@ -14,7 +14,7 @@ Various improvements to the Mod page. This includes:
 
 ## Installation
 ### Recommended
-It is recommended to use the [CivMods](https://civmods.com/) manager.
+It is recommended to use the [CivMods](https://civmods.com/install?modCfId=32024) manager.
 ### Manual
 Extract to your Mods folder.
 * **Windows:** %localappdata%\Firaxis Games\Sid Meier's Civilization VII\Mods
