@@ -123,6 +123,7 @@ export class ModsContent extends Panel {
 							<fxs-header class="selected-mod-name relative flex justify-center font-title text-xl uppercase mb-3"></fxs-header>
 							<p class="mod-author relative"></p>
 							<p class="mod-thanks hidden relative"></p>
+                            <p class="mod-civmods hidden relative"></p>
 							<fxs-header filigree-style="none"
 										class="mod-description-header relative flex text-lg uppercase mb-1 mt-6"
 										title="LOC_MOD_TCS_UI_DESCRIPTION_HEADER"></fxs-header>
@@ -148,7 +149,6 @@ export class ModsContent extends Panel {
 									<p class="mod-official hidden"></p>
 									<p class="mod-unofficial hidden"></p>
 									<p class="mod-compatibility hidden"></p>
-                                    <p class="mod-civmods hidden"></p>
 								</div>
 							</fxs-hslot>
 							
@@ -456,6 +456,7 @@ export class ModsContent extends Panel {
         if (Modding.getModProperty(modInfo.handle, 'CivModsVersion') || Modding.getModProperty(modInfo.handle, 'CivModsURL')) {
 			this.modCivModsText.classList.remove('hidden');
 			this.modCivModsText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_CIVMODS_MANAGED"));
+            this.modCivModsText.setAttribute('data-tooltip-content', Locale.compose("LOC_MOD_TCS_UI_CIVMODS_MANAGED_TOOLTIP"));
         }
 		else {
 			this.modCivModsText.classList.add('hidden');

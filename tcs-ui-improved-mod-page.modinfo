@@ -10,7 +10,7 @@
 		<URL>LOC_MOD_TCS_IMPROVED_MOD_PAGE_URL</URL>
 		<Package>Mod</Package>
 		<AffectsSavedGames>0</AffectsSavedGames>
-		<Version>3</Version>
+		<Version>4</Version>
 	</Properties>
 	<Dependencies>
 	</Dependencies>
@@ -47,6 +47,7 @@
 					<Item>assets/tcs-ui-star.png</Item>
 					<Item>assets/tcs-ui-user.png</Item>
 					<Item>assets/tcs-ui-wrench.png</Item>
+					<Item>assets/civmods-logo.png</Item>
 				</ImportFiles>
 				<UpdateIcons>
 					<Item>icons/icons.xml</Item>

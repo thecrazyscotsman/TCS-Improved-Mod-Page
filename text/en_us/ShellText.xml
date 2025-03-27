@@ -114,7 +114,10 @@
 			<Text>Copied!</Text>
 		</Row>
 		<Row Tag="LOC_MOD_TCS_UI_CIVMODS_MANAGED">
-			<Text>[icon:TCS_ICON_WRENCH] Managed by [B]CivMods[/B]!</Text>
+			<Text>[icon:TCS_ICON_CIVMODS] Managed by [B]CivMods[/B]!</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_CIVMODS_MANAGED_TOOLTIP">
+			<Text>This mod was installed by leonardfactory's CivMods manager. Certain Properties may be auto-populated by CivMods if not provided by the author (Version, for example).</Text>
 		</Row>
 		
 		<Row Tag="LOC_MOD_TCS_UI_ENABLED">

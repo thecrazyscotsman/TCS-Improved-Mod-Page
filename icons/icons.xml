@@ -81,6 +81,11 @@
             <Path>fs://game/tcs-ui-internet.png</Path>
             <Context>DEFAULT</Context>
         </Row>
+        <Row>
+            <ID>TCS_ICON_CIVMODS</ID>
+            <Path>fs://game/civmods-logo.png</Path>
+            <Context>DEFAULT</Context>
+        </Row>
 	</IconDefinitions>
 	<IconAliases>
 	</IconAliases>
