@@ -86,6 +86,26 @@
             <Path>fs://game/civmods-logo.png</Path>
             <Context>DEFAULT</Context>
         </Row>
+        <Row>
+            <ID>TCS_ICON_DOWNLOAD</ID>
+            <Path>fs://game/tcs-ui-download.png</Path>
+            <Context>DEFAULT</Context>
+        </Row>
+        <Row>
+            <ID>TCS_ICON_BOOKMARK</ID>
+            <Path>fs://game/tcs-ui-bookmark.png</Path>
+            <Context>DEFAULT</Context>
+        </Row>
+        <Row>
+            <ID>TCS_ICON_SEARCH</ID>
+            <Path>fs://game/tcs-ui-search.png</Path>
+            <Context>DEFAULT</Context>
+        </Row>
+        <Row>
+            <ID>TCS_ICON_VIEW</ID>
+            <Path>fs://game/tcs-ui-view.png</Path>
+            <Context>DEFAULT</Context>
+        </Row>
 	</IconDefinitions>
 	<IconAliases>
 	</IconAliases>

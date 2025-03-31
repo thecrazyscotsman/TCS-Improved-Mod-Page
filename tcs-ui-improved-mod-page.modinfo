@@ -48,6 +48,10 @@
 					<Item>assets/tcs-ui-user.png</Item>
 					<Item>assets/tcs-ui-wrench.png</Item>
 					<Item>assets/civmods-logo.png</Item>
+					<Item>assets/tcs-ui-download.png</Item>
+					<Item>assets/tcs-ui-bookmark.png</Item>
+					<Item>assets/tcs-ui-view.png</Item>
+					<Item>assets/tcs-ui-search.png</Item>
 				</ImportFiles>
 				<UpdateIcons>
 					<Item>icons/icons.xml</Item>

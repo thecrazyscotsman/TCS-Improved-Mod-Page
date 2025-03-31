@@ -93,7 +93,7 @@
 			<Text>[icon:TCS_ICON_ADD] Unofficial content created by [B]fans[/B]</Text>
 		</Row>
 		<Row Tag="LOC_MOD_TCS_UI_DATE_CREATED">
-			<Text>[icon:TCS_ICON_QUESTION] Published on [B]{1_String}[/B]</Text>
+			<Text>[icon:TCS_ICON_DOWNLOAD] Published on [B]{1_String}[/B]</Text>
 		</Row>
 		<Row Tag="LOC_MOD_TCS_UI_AFFECTS_SAVE_GAMES">
 			<Text>[icon:TCS_ICON_KEY] This mod [B]Affects Save Games[/B]</Text>
@@ -118,6 +118,12 @@
 		</Row>
 		<Row Tag="LOC_MOD_TCS_UI_CIVMODS_MANAGED_TOOLTIP">
 			<Text>This mod was installed by leonardfactory's CivMods manager. Certain Properties may be auto-populated by CivMods if not provided by the author (Version, for example).</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_CIVMODS_CATEGORY">
+			<Text>[icon:TCS_ICON_QUESTION] [B]Content Category: [/B]{1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_CIVMOD_VERSION_ID">
+			<Text>[icon:TCS_ICON_SETTINGS] [B]CivMods Version Id:[/B] {1_String}</Text>
 		</Row>
 		
 		<Row Tag="LOC_MOD_TCS_UI_ENABLED">
