@@ -10,7 +10,7 @@
 		<URL>LOC_MOD_TCS_IMPROVED_MOD_PAGE_URL</URL>
 		<Package>Mod</Package>
 		<AffectsSavedGames>0</AffectsSavedGames>
-		<Version>4</Version>
+		<Version>5</Version>
 	</Properties>
 	<Dependencies>
 	</Dependencies>

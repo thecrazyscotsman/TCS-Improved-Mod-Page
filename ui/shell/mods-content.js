@@ -487,7 +487,7 @@ export class ModsContent extends Panel {
 		}
 
         // CivMods
-        if (Modding.getModProperty(modInfo.handle, 'CivModsVersion') || Modding.getModProperty(modInfo.handle, 'CivModsURL') || category || modCivModsVersionId) {
+        if (Modding.getModProperty(modInfo.handle, 'CivModsVersion') || Modding.getModProperty(modInfo.handle, 'CivModsURL') || Modding.getModProperty(modInfo.handle, 'CivModsCategory')) {
 			this.modCivModsText.classList.remove('hidden');
 			this.modCivModsText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_CIVMODS_MANAGED"));
             this.modCivModsText.setAttribute('data-tooltip-content', Locale.compose("LOC_MOD_TCS_UI_CIVMODS_MANAGED_TOOLTIP"));
