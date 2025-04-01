@@ -113,7 +113,18 @@
 		<Row Tag="LOC_MOD_TCS_UI_MOD_URL_TOOLTIP_COPIED" Language="ko_KR">
 			<Text>복사됨!</Text>
 		</Row>
-		
+		<Row Tag="LOC_MOD_TCS_UI_CIVMODS_MANAGED" Language="ko_KR">
+    		<Text>[icon:TCS_ICON_CIVMODS] [B]CivMods[/B]에서 관리됩니다!</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_CIVMODS_MANAGED_TOOLTIP" Language="ko_KR">
+		    <Text>이 모드는 leonardfactory의 CivMods manager로 설치되었습니다. 특정 속성(예: 버전 등)은 작성자가 제공하지 않을 경우 CivMods에서 자동으로 채울 수 있습니다.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_CIVMODS_CATEGORY" Language="ko_KR">
+    		<Text>[icon:TCS_ICON_QUESTION] [B]콘텐츠 카테고리:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_CIVMOD_VERSION_ID" Language="ko_KR">
+    		<Text>[icon:TCS_ICON_SETTINGS] [B]CivMods 버전 ID:[/B] {1_String}</Text>
+		</Row>
 		<Row Tag="LOC_MOD_TCS_UI_ENABLED" Language="ko_KR">
 			<Text>[icon:TCS_ICON_YES]</Text>
 		</Row>
