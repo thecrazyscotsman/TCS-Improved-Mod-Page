@@ -9,6 +9,19 @@ import Panel from '/core/ui/panel-support.js';
 import { MustGetElement } from '/core/ui/utilities/utilities-dom.js';
 import ActionHandler from '/core/ui/input/action-handler.js';
 import { Audio } from '/core/ui/audio-base/audio-support.js';
+function compareInstalledMods(a, b) {
+    if (a.length != b.length) {
+        return false;
+    }
+    else {
+        for (let i = 0; i < a.length; ++i) {
+            if (a[i] != b[i]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
 
 console.warn("----------------------------------");
 console.warn("TCS IMPROVED MOD PAGE (TCS-IMP) - LOADED");
@@ -187,13 +200,13 @@ export class ModsContent extends Panel {
 				modList.removeChild(modList.lastChild);
 			}	
 			
-			const toggleEnableButton = MustGetElement('.toggle-enable');
+			const toggleEnableButton = MustGetElement('.toggle-enable', document);
 			toggleEnableButton.addEventListener("action-activate", this.modToggledActivateListener);
 
-            const toggleEnableAllButton = MustGetElement('.enable-all-official');
+            const toggleEnableAllButton = MustGetElement('.enable-all-official', document);
 			toggleEnableAllButton.addEventListener("action-activate", this.officialModsEnabledActivateListener);
 
-            const toggleDisableAllButton = MustGetElement('.disable-all-official');
+            const toggleDisableAllButton = MustGetElement('.disable-all-official', document);
 			toggleDisableAllButton.addEventListener("action-activate", this.officialModsDisabledActivateListener);
 			
 			// Update Selected Mods handle.
@@ -264,13 +277,13 @@ export class ModsContent extends Panel {
 				modList.removeChild(modList.lastChild);
 			}		
 			
-			const toggleEnableButton = MustGetElement('.toggle-enable');
+			const toggleEnableButton = MustGetElement('.toggle-enable', document);
 			toggleEnableButton.addEventListener("action-activate", this.modToggledActivateListener);
 
-            const toggleEnableAllButton = MustGetElement('.enable-all-unofficial');
+            const toggleEnableAllButton = MustGetElement('.enable-all-unofficial', document);
 			toggleEnableAllButton.addEventListener("action-activate", this.unofficialModsEnabledActivateListener);
 
-            const toggleDisableAllButton = MustGetElement('.disable-all-unofficial');
+            const toggleDisableAllButton = MustGetElement('.disable-all-unofficial', document);
 			toggleDisableAllButton.addEventListener("action-activate", this.unofficialModsDisabledActivateListener);
 			
 			// Update Selected Mods handle.
@@ -311,7 +324,31 @@ export class ModsContent extends Panel {
 				
                 const modEnabled = document.createElement('div');
                 modEnabled.classList.add('mod-text-enabled', 'relative', 'flex', 'grow', 'justify-end', 'uppercase', 'text-lg', 'font-title');
-                modEnabled.setAttribute('data-l10n-id', mod.enabled ? "LOC_MOD_TCS_UI_ENABLED" : "LOC_MOD_TCS_UI_DISABLED");
+				
+				let modStatus = mod.enabled ? "[icon:TCS_ICON_YES]" : "[icon:TCS_ICON_NO]";
+				if (mod.subscriptionType) {
+					switch (mod.subscriptionType) {
+						case "CommunityContent":
+							
+							// CivMods
+							if (Modding.getModProperty(mod.handle, 'CivModsVersion') || Modding.getModProperty(mod.handle, 'CivModsURL') || Modding.getModProperty(mod.handle, 'CivModsCategory')) {
+								modStatus = "[icon:TCS_ICON_CIVMODS]" + modStatus;
+							}
+							else {
+								modStatus = "[icon:TCS_ICON_WRENCH]" + modStatus;
+							}
+							break;
+						case "SteamWorkshopContent":
+							modStatus = "[icon:TCS_ICON_STEAM]" + modStatus;
+							break;
+						case "OfficialContent":
+						default:
+							//entry = `[icon:dlc] ${mod.name}`;
+							break;
+					}
+				}
+				
+                modEnabled.setAttribute('data-l10n-id', modStatus);
                 modTextContainer.appendChild(modEnabled);
 				
                 this.unofficialModPairs.push([mod.handle, modIndex]);
@@ -476,26 +513,44 @@ export class ModsContent extends Panel {
             this.modCivModsVersionIdText.classList.add('hidden');
         }*/
         
-        // CivMods - Category
-		const category = Modding.getModProperty(modInfo.handle, 'CivModsCategory');
-        if (category) {
-			this.modCivModsCategoryText.classList.remove('hidden');
-			this.modCivModsCategoryText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_CIVMODS_CATEGORY", category));
-        }
-		else {
-			this.modCivModsCategoryText.classList.add('hidden');
-		}
+		if (modInfo.subscriptionType) {
+			switch (modInfo.subscriptionType) {
+				case "CommunityContent":
+					// CivMods - Category
+					const category = Modding.getModProperty(modInfo.handle, 'CivModsCategory');
+					if (category) {
+						this.modCivModsCategoryText.classList.remove('hidden');
+						this.modCivModsCategoryText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_CIVMODS_CATEGORY", category));
+					}
+					else {
+						this.modCivModsCategoryText.classList.add('hidden');
+					}
 
-        // CivMods
-        if (Modding.getModProperty(modInfo.handle, 'CivModsVersion') || Modding.getModProperty(modInfo.handle, 'CivModsURL') || Modding.getModProperty(modInfo.handle, 'CivModsCategory')) {
-			this.modCivModsText.classList.remove('hidden');
-			this.modCivModsText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_CIVMODS_MANAGED"));
-            this.modCivModsText.setAttribute('data-tooltip-content', Locale.compose("LOC_MOD_TCS_UI_CIVMODS_MANAGED_TOOLTIP"));
-        }
-		else {
-			this.modCivModsText.classList.add('hidden');
+					// CivMods
+					if (Modding.getModProperty(modInfo.handle, 'CivModsVersion') || Modding.getModProperty(modInfo.handle, 'CivModsURL') || Modding.getModProperty(modInfo.handle, 'CivModsCategory')) {
+						this.modCivModsText.classList.remove('hidden');
+						this.modCivModsText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_CIVMODS_MANAGED"));
+						this.modCivModsText.setAttribute('data-tooltip-content', Locale.compose("LOC_MOD_TCS_UI_CIVMODS_MANAGED_TOOLTIP"));
+					}
+					else {
+						this.modCivModsText.classList.remove('hidden');
+						this.modCivModsText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_MANUALLY_MANAGED"));
+						this.modCivModsText.setAttribute('data-tooltip-content', Locale.compose("LOC_MOD_TCS_UI_MANUALLY_MANAGED_TOOLTIP"));
+					}
+					break;
+				case "SteamWorkshopContent":
+					this.modCivModsText.classList.remove('hidden');
+					this.modCivModsText.setAttribute('data-l10n-id', Locale.stylize("LOC_MOD_TCS_UI_STEAM_MANAGED"));
+					this.modCivModsText.setAttribute('data-tooltip-content', Locale.compose("LOC_MOD_TCS_UI_STEAM_MANAGED_TOOLTIP"));
+					break;
+				case "OfficialContent":
+				default:
+					//entry = `[icon:dlc] ${mod.name}`;
+					break;
+			}
 		}
-		
+				
+        
 		// URL
 		const modUrl = (Modding.getModProperty(modInfo.handle, 'URL')) ? Modding.getModProperty(modInfo.handle, 'URL') : Modding.getModProperty(modInfo.handle, 'CivModsURL');
         if (modUrl) {
@@ -574,7 +629,7 @@ export class ModsContent extends Panel {
             Modding.enableMods(modHandles, true);
         }
         // While we rebuild, prevent the player from clicking the toggle enable button
-        const toggleEnableButton = MustGetElement('.toggle-enable');
+        const toggleEnableButton = MustGetElement('.toggle-enable', document);
         toggleEnableButton.setAttribute('disabled', 'true');
 		this.handleSelection(this.selectedModHandle, this.selectedModIndex);
 		this.updateModEntry(this.selectedModIndex);
@@ -727,7 +782,29 @@ export class ModsContent extends Panel {
             nameText.textContent = modInfo.name;
         }
         if (enabledText) {
-            enabledText.setAttribute('data-l10n-id', modInfo.enabled ? "LOC_MOD_TCS_UI_ENABLED" : "LOC_MOD_TCS_UI_DISABLED");
+			let modStatus = modInfo.enabled ? "[icon:TCS_ICON_YES]" : "[icon:TCS_ICON_NO]";
+			if (modInfo.subscriptionType) {
+				switch (modInfo.subscriptionType) {
+					case "CommunityContent":
+						
+						// CivMods
+						if (Modding.getModProperty(modInfo.handle, 'CivModsVersion') || Modding.getModProperty(modInfo.handle, 'CivModsURL') || Modding.getModProperty(modInfo.handle, 'CivModsCategory')) {
+							modStatus = "[icon:TCS_ICON_CIVMODS]" + modStatus;
+						}
+						else {
+							modStatus = "[icon:TCS_ICON_WRENCH]" + modStatus;
+						}
+						break;
+					case "SteamWorkshopContent":
+						modStatus = "[icon:TCS_ICON_STEAM]" + modStatus;
+						break;
+					case "OfficialContent":
+					default:
+						//entry = `[icon:dlc] ${mod.name}`;
+						break;
+				}
+			}
+            enabledText.setAttribute('data-l10n-id', modStatus);
         }
     }
 	getDLCPackage(mod) {

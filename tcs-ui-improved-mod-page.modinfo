@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Mod id="tcs-ui-improved-mod-page" version="3"
+<Mod id="tcs-ui-improved-mod-page" version="6"
 	xmlns="ModInfo">
 	<Properties>
 		<Name>LOC_MOD_TCS_IMPROVED_MOD_PAGE_NAME</Name>
@@ -10,7 +10,7 @@
 		<URL>LOC_MOD_TCS_IMPROVED_MOD_PAGE_URL</URL>
 		<Package>Mod</Package>
 		<AffectsSavedGames>0</AffectsSavedGames>
-		<Version>5</Version>
+		<Version>6</Version>
 	</Properties>
 	<Dependencies>
 	</Dependencies>
@@ -48,6 +48,7 @@
 					<Item>assets/tcs-ui-user.png</Item>
 					<Item>assets/tcs-ui-wrench.png</Item>
 					<Item>assets/civmods-logo.png</Item>
+					<Item>assets/steam-logo.png</Item>
 					<Item>assets/tcs-ui-download.png</Item>
 					<Item>assets/tcs-ui-bookmark.png</Item>
 					<Item>assets/tcs-ui-view.png</Item>

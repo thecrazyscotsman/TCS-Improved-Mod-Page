@@ -86,6 +86,11 @@
             <Path>fs://game/civmods-logo.png</Path>
             <Context>DEFAULT</Context>
         </Row>
+		<Row>
+            <ID>TCS_ICON_STEAM</ID>
+            <Path>fs://game/steam-logo.png</Path>
+            <Context>DEFAULT</Context>
+        </Row>
         <Row>
             <ID>TCS_ICON_DOWNLOAD</ID>
             <Path>fs://game/tcs-ui-download.png</Path>

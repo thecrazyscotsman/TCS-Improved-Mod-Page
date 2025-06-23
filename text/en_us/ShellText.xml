@@ -11,7 +11,7 @@
 			<Text>thecrazyscotsman</Text>
 		</Row>
 		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_THANKS">
-			<Text>Fathema Khanom and FlatIcon for the UI icons.</Text>
+			<Text>Fathema Khanom and FlatIcon for the UI icons. Icons8 for the Steam icon.</Text>
 		</Row>
 		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_COMPATIBILITY">
 			<Text>This should be compatible with all other mods.</Text>
@@ -113,11 +113,23 @@
 		<Row Tag="LOC_MOD_TCS_UI_MOD_URL_TOOLTIP_COPIED">
 			<Text>Copied!</Text>
 		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MANUALLY_MANAGED">
+			<Text>[icon:TCS_ICON_WRENCH] Manually installed!</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MANUALLY_MANAGED_TOOLTIP">
+			<Text>This mod was manually installed and will require manual updates.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_STEAM_MANAGED">
+			<Text>[icon:TCS_ICON_STEAM] Managed by the [B]Steam Workshop[/B]!</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_STEAM_MANAGED_TOOLTIP">
+			<Text>This mod was installed by the Steam Workshop and will update automatically.</Text>
+		</Row>
 		<Row Tag="LOC_MOD_TCS_UI_CIVMODS_MANAGED">
 			<Text>[icon:TCS_ICON_CIVMODS] Managed by [B]CivMods[/B]!</Text>
 		</Row>
 		<Row Tag="LOC_MOD_TCS_UI_CIVMODS_MANAGED_TOOLTIP">
-			<Text>This mod was installed by leonardfactory's CivMods manager. Certain Properties may be auto-populated by CivMods if not provided by the author (Version, for example).</Text>
+			<Text>This mod was installed by leonardfactory's CivMods manager and can be updated from there.</Text>
 		</Row>
 		<Row Tag="LOC_MOD_TCS_UI_CIVMODS_CATEGORY">
 			<Text>[icon:TCS_ICON_QUESTION] [B]Content Category: [/B]{1_String}</Text>
