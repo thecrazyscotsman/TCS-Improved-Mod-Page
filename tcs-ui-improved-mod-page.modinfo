@@ -59,6 +59,7 @@
 				</UpdateIcons>
 				<UpdateText>
 					<Item>text/en_us/ShellText.xml</Item>
+					<Item locale="es_ES">text/es_es/ShellText.xml</Item>
 					<Item locale="pl_PL">text/pl_pl/ShellText.xml</Item>
 					<Item locale="pt_BR">text/pt_br/ShellText.xml</Item>
 					<Item locale="ko_KR">text/ko_kr/ShellText.xml</Item>
@@ -72,6 +73,7 @@
 	</ActionGroups>
 	<LocalizedText>
 		<File>text/en_us/ShellText.xml</File>
+		<File>text/es_es/ShellText.xml</File>
 		<File>text/pl_pl/ShellText.xml</File>
 		<File>text/pt_br/ShellText.xml</File>
 		<File>text/it_it/ShellText.xml</File>
