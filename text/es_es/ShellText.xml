@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+	<LocalizedText>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_NAME" Language="es_ES">
+			<Text>TCS Improved Mod Page</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_DESCRIPTION" Language="es_ES">
+			<Text>Various improvements to the Mod page. This includes:[LIST][LI] • Separating official and fan content into different scrollable lists[LI] • Show hidden and locked content[LI] • Reducing wasted space[LI] • Added support for several custom Properties[LI] • Added iconography to aid in status readability[/LIST][N][icon:TCS_ICON_YES] Enabled[N][icon:TCS_ICON_NO] Disabled[N][icon:TCS_ICON_LOCK] Locked[N][icon:TCS_ICON_CORE] Essential[/LIST][N][B]Modders:[/B]To support custom Properties (currently [B]SpecialThanks[/B], [B]Version[/B], [B]Compatibility[/B], and [B]URL[/B]) simply add them to the Properties tag within your .modinfo file, using mine as an example.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_AUTHORS" Language="es_ES">
+			<Text>thecrazyscotsman</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_THANKS" Language="es_ES">
+			<Text>Fathema Khanom y FlatIcon por los iconos de la IU. Icons8 por el icono de Steam.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_COMPATIBILITY" Language="es_ES">
+			<Text>Esto debería ser compatible con el resto de mods.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_IMPROVED_MOD_PAGE_URL" Language="es_ES">
+			<Text>https://forums.civfanatics.com/resources/tcs-improved-mod-page.32024</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_OFFICIAL_HEADER" Language="es_ES">
+			<Text>Firaxis</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_UNOFFICIAL_HEADER" Language="es_ES">
+			<Text>Mods</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DETAILS_HEADER" Language="es_ES">
+			<Text>Detalles</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_DESCRIPTION_HEADER" Language="es_ES">
+			<Text>Descripción</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_GATED_HEADER" Language="es_ES">
+			<Text>Contenido bloqueado</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_PROPERTIES_HEADER" Language="es_ES">
+			<Text>Propiedades</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_ENABLE_ALL" Language="es_ES">
+			<Text>[icon:TCS_ICON_YES] Todo</Text>
+		</Row>	
+		<Row Tag="LOC_MOD_TCS_UI_DISABLE_ALL" Language="es_ES">
+			<Text>[icon:TCS_ICON_NO] Todo</Text>
+		</Row>			
+		
+		<Row Tag="LOC_MOD_TCS_UI_AUTHOR" Language="es_ES">
+			<Text>[icon:TCS_ICON_USER] [B]Autor:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_SPECIAL_THANKS" Language="es_ES">
+			<Text>[icon:TCS_ICON_SMILE] [B]Agradecimientos:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_PACKAGE" Language="es_ES">
+			<Text>No tienes este contenido o no ha salido, y requiere {1_String}.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_ADDITIONAL" Language="es_ES">
+			<Text>DLC adicional</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_DLC_CROSSROADS_CONTENT" Language="es_ES">
+			<Text>la [B]Encrucijada del mundo[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_RIGHT_TO_RULE_CONTENT" Language="es_ES">
+			<Text>la [B]colección Derecho a gobernar[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_DELUXE_CONTENT" Language="es_ES">
+			<Text>el [B]Pack Contenido Deluxe[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_FOUNDERS_CONTENT" Language="es_ES">
+			<Text>the [B]Pack de Contenido de Fundadores[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_SHAWNEE_CONTENT" Language="es_ES">
+			<Text>el [B]Pack de Tecumseh y los Shawnees[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_NAPOLEON_CONTENT" Language="es_ES">
+			<Text>crear una [B]Cuenta 2K[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DLC_NAPOLEON_ALT_CONTENT" Language="es_ES">
+			<Text>crear una [B]Cuenta 2K[/B] y [B]Civilization VI[/B]</Text>
+		</Row>
+		
+		
+		<Row Tag="LOC_MOD_TCS_UI_VERSION" Language="es_ES">
+			<Text>[icon:TCS_ICON_WRENCH] Versión [B]{1_String}[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_OFFICIAL" Language="es_ES">
+			<Text>[icon:TCS_ICON_STAR] Contenido oficial de [B]Firaxis[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_UNOFFICIAL" Language="es_ES">
+			<Text>[icon:TCS_ICON_ADD] Contenido no oficial creado por [B]fans[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DATE_CREATED" Language="es_ES">
+			<Text>[icon:TCS_ICON_DOWNLOAD] Publicado en [B]{1_String}[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_AFFECTS_SAVE_GAMES" Language="es_ES">
+			<Text>[icon:TCS_ICON_KEY] Este mod [B]Afecta Partidas Guardadas[/B]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_ID" Language="es_ES">
+			<Text>[icon:TCS_ICON_SETTINGS] [B]Id del Mod:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_COMPATIBILITY" Language="es_ES">
+			<Text>[icon:TCS_ICON_QUESTION] [B]Notas de compatibilidad:[/B] {1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL" Language="es_ES">
+			<Text>[icon:TCS_ICON_INTERNET] [STYLE:clickable-link]Página del Mod[/STYLE]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL_TOOLTIP" Language="es_ES">
+			<Text>Click para copiar al portapapeles.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MOD_URL_TOOLTIP_COPIED" Language="es_ES">
+			<Text>¡Copiado!</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MANUALLY_MANAGED" Language="es_ES">
+			<Text>[icon:TCS_ICON_WRENCH] ¡Instalado manualmente!</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_MANUALLY_MANAGED_TOOLTIP" Language="es_ES">
+			<Text>Este mod se ha instalado manualmente y requiere actualizarlo de la misma manera.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_STEAM_MANAGED" Language="es_ES">
+			<Text>[icon:TCS_ICON_STEAM] ¡Gestionado por la [B]Steam Workshop[/B]!</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_STEAM_MANAGED_TOOLTIP" Language="es_ES">
+			<Text>Este mod se ha instalado con la Steam Workshop y se actualiza automáticamente.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_CIVMODS_MANAGED" Language="es_ES">
+			<Text>[icon:TCS_ICON_CIVMODS] ¡Gestionado por [B]CivMods[/B]!</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_CIVMODS_MANAGED_TOOLTIP" Language="es_ES">
+			<Text>Este mod ha sido instalando usando CivMods de  leonardfactory y se puede actualizar desde ahí.</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_CIVMODS_CATEGORY" Language="es_ES">
+			<Text>[icon:TCS_ICON_QUESTION] [B]Tipo de Contenido: [/B]{1_String}</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_CIVMOD_VERSION_ID" Language="es_ES">
+			<Text>[icon:TCS_ICON_SETTINGS] [B]Id de Versión en CivMods:[/B] {1_String}</Text>
+		</Row>
+		
+		<Row Tag="LOC_MOD_TCS_UI_ENABLED" Language="es_ES">
+			<Text>[icon:TCS_ICON_YES]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_DISABLED" Language="es_ES">
+			<Text>[icon:TCS_ICON_NO]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_GATED" Language="es_ES">
+			<Text>[icon:TCS_ICON_LOCK]</Text>
+		</Row>
+		<Row Tag="LOC_MOD_TCS_UI_CORE" Language="es_ES">
+			<Text>[icon:TCS_ICON_CORE]</Text>
+		</Row>
+		
+	</LocalizedText>
+</Database>
