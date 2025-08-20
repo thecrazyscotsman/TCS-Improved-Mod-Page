@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Mod id="tcs-ui-improved-mod-page" version="6"
+<Mod id="tcs-ui-improved-mod-page" version="7"
 	xmlns="ModInfo">
 	<Properties>
 		<Name>LOC_MOD_TCS_IMPROVED_MOD_PAGE_NAME</Name>
@@ -10,7 +10,7 @@
 		<URL>LOC_MOD_TCS_IMPROVED_MOD_PAGE_URL</URL>
 		<Package>Mod</Package>
 		<AffectsSavedGames>0</AffectsSavedGames>
-		<Version>6</Version>
+		<Version>7</Version>
 	</Properties>
 	<Dependencies>
 	</Dependencies>

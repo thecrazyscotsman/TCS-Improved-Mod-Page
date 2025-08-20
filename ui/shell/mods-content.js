@@ -3,12 +3,20 @@
  * @copyright 2024, Firaxis Games
  * @description Screen listing the mods with details.
  */
-import FocusManager from '/core/ui/input/focus-manager.js';
-import NavTray from '/core/ui/navigation-tray/model-navigation-tray.js';
-import Panel from '/core/ui/panel-support.js';
-import { MustGetElement } from '/core/ui/utilities/utilities-dom.js';
-import ActionHandler from '/core/ui/input/action-handler.js';
-import { Audio } from '/core/ui/audio-base/audio-support.js';
+import FocusManager, { A as Audio } from '../../input/focus-manager.js';
+import ActionHandler from '../../input/action-handler.js';
+import { N as NavTray } from '../../navigation-tray/model-navigation-tray.chunk.js';
+import { P as Panel } from '../../panel-support.chunk.js';
+import { MustGetElement } from '../../utilities/utilities-dom.chunk.js';
+
+import '../../framework.chunk.js';
+import '../../input/cursor.js';
+import '../../views/view-manager.chunk.js';
+import '../../input/input-support.chunk.js';
+import '../../utilities/utilities-image.chunk.js';
+import '../../utilities/utilities-component-id.chunk.js';
+import '../../utilities/utilities-update-gate.chunk.js';
+
 function compareInstalledMods(a, b) {
     if (a.length != b.length) {
         return false;
@@ -27,7 +35,7 @@ console.warn("----------------------------------");
 console.warn("TCS IMPROVED MOD PAGE (TCS-IMP) - LOADED");
 console.warn("----------------------------------");
 
-export class ModsContent extends Panel {
+class ModsContent extends Panel {
     constructor(root) {
         super(root);
         this.showNotOwnedContent = true;
@@ -37,7 +45,7 @@ export class ModsContent extends Panel {
 		this.unofficialMods = [];
 		this.allMods.forEach((mod) => {
 			if (mod.handle != null) {
-				if (mod.official) {
+				if (mod.official || mod.id == "trung-nhi") {
 					this.officialMods.push(mod);
 				}
 				else {
@@ -544,6 +552,9 @@ export class ModsContent extends Panel {
 					this.modCivModsText.setAttribute('data-tooltip-content', Locale.compose("LOC_MOD_TCS_UI_STEAM_MANAGED_TOOLTIP"));
 					break;
 				case "OfficialContent":
+                    this.modCivModsCategoryText.classList.add('hidden');
+                    this.modCivModsText.classList.add('hidden');
+                    this.modCivModsVersionIdText.classList.add('hidden');
 				default:
 					//entry = `[icon:dlc] ${mod.name}`;
 					break;
@@ -783,7 +794,7 @@ export class ModsContent extends Panel {
         }
         if (enabledText) {
 			let modStatus = modInfo.enabled ? "[icon:TCS_ICON_YES]" : "[icon:TCS_ICON_NO]";
-			if (modInfo.subscriptionType) {
+			if (modInfo.subscriptionType && !modInfo.official ) {
 				switch (modInfo.subscriptionType) {
 					case "CommunityContent":
 						
@@ -812,6 +823,9 @@ export class ModsContent extends Panel {
 		if (pkg == 'Carlisle') {
 			return Locale.compose("LOC_MOD_TCS_UI_DLC_CROSSROADS_CONTENT");
 		}
+        else if (pkg == 'Hexham') {
+            return Locale.compose("LOC_MOD_TCS_UI_DLC_RIGHT_TO_RULE_CONTENT");
+        }
 		else if (mod.id == 'friedrich-xerxes-alt') {
 			return Locale.compose("LOC_MOD_TCS_UI_DLC_DELUXE_CONTENT"); 
 		}
@@ -844,4 +858,5 @@ Controls.define('mods-content', {
     tabIndex: -1
 });
 
-//# sourceMappingURL=file:///core/ui/shell/mods-content/mods-content.js.map
+export { ModsContent };
+//# sourceMappingURL=mods-content.js.map
